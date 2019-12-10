@@ -1,4 +1,4 @@
-FSharp.Core
+group SaturnCommon
 Expecto
 NSubstitute
 Giraffe

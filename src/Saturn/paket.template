@@ -14,3 +14,32 @@ iconurl https://avatars0.githubusercontent.com/u/35305523?s=200&v=4
 include-pdbs true
 tags
   F#, web, framework, ASP.Net, Core, HTTP, Service, MVC, functional
+dependencies
+  framework: netstandard2.0
+    FSharp.Core >= 4.2.3
+    Giraffe ~> 4.0
+    Microsoft.AspNetCore >= 2.2
+    Microsoft.AspNetCore.Session >= 2.2
+    Microsoft.AspNetCore.ResponseCompression >= 2.2
+    Microsoft.AspNetCore.StaticFiles >= 2.2
+    Microsoft.Extensions.Caching.Memory >= 2.2
+    Microsoft.AspNetCore.Rewrite >= 2.2
+    Microsoft.AspNetCore.Cors >= 2.2
+    Microsoft.AspNetCore.Authentication.JwtBearer < 3.0.0
+    Microsoft.AspNetCore.Authentication.Cookies >= 2.2
+    Microsoft.AspNetCore.Authentication.Google >= 2.2
+    Microsoft.AspNetCore.Authentication.OAuth >= 2.2
+    Microsoft.AspNetCore.Authorization >= 2.2
+    Microsoft.AspNetCore.Antiforgery >= 2.2
+    Microsoft.AspNetCore.Authentication.OpenIdConnect >= 2.2
+    Microsoft.AspNetCore.Server.HttpSys >= 2.2
+    Microsoft.AspNetCore.WebSockets >= 2.2
+    FSharp.Control.Websockets >= 0.2
+    System.Threading.Tasks.Dataflow >= 4.9
+
+  framework: netcoreapp3.0
+    FSharp.Core >= 4.2.3
+    FSharp.Control.Websockets >= 0.2
+    System.Threading.Tasks.Dataflow >= 4.9
+    Microsoft.AspNetCore.Authentication.JwtBearer < 3.1.0
+    Giraffe ~> 4.0

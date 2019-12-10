@@ -1,3 +1,6 @@
+### 0.11.0 - 06.12.2019
+* Work better with netcore3
+
 ### 0.10.0 - 17.10.2019
 * add OpenId Saturn extension (by [@gfritz](https://github.com/gfritz))
 * updated Giraffe to version 4 (by [@brase](https://github.com/brase))

@@ -385,9 +385,15 @@ module Application =
                 req.Headers.Authorization <- AuthenticationHeaderValue("Bearer", ctx.AccessToken)
                 let! (response : HttpResponseMessage) = ctx.Backchannel.SendAsync(req, HttpCompletionOption.ResponseHeadersRead, ctx.HttpContext.RequestAborted)
                 response.EnsureSuccessStatusCode () |> ignore
-                let! cnt = response.Content.ReadAsStringAsync()
-                let user = JObject.Parse cnt
+                let! content = response.Content.ReadAsStringAsync()
+                #if NETSTANDARD2_0
+                let user = JObject.Parse content
                 ctx.RunClaimActions user
+                #endif
+                #if NETCOREAPP3_0
+                let user = Text.Json.JsonDocument.Parse content
+                ctx.RunClaimActions user.RootElement
+                #endif
               }
               Task.Factory.StartNew(fun () -> tsk.Result)
 
